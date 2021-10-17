@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} CS - Login {% endblock %}
+
+{% block header %}
+<!-- <img src="static/img/burger.svg" class= "burger" alt=""> -->
+<h1 class="login-title">Login</h1>
+<form method='post' action="" class="form-login"> {% csrf_token %}
+    <table>{{form.as_table}}</table>
+
+    <p><input type="submit" value="Login" class="login-button"></p>
+
+
+    <!-- <label class='login-label' for="username">Username:</label>         <br>
+    <input class='login-input' type="text" id="username">           <br><br>
+    <label class='login-label' for="password">Password:</label>       <br>
+    <input class='login-input'  type="password" id="password">        <br><br> -->
+</form>
+<div class="separator"> <hr> </div>
+<div class="create-account">
+    <a class="non-login" href="{% url 'register' %}">New to our site? Create an account</a>
+</div>
+
+{% endblock %}
+
+{% block content %}{% endblock %}
