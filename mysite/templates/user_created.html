@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}  CS - User created {% endblock %}
+
+{% block header %}
+<h2 class="user-created">User Created Successfully</h2>
+{% endblock %}
+
+{% block content %}
+<hr>
+<br>
+<p class="new-description">You can click here to log into your profile</p>
+<!-- <button  class="newlogin-button">Go to Login</button> -->
+
+<form action="{% url 'login' %}">
+    <input type="submit" class="newlogin-button" value="Go to Login" />
+</form>
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} CS - Homepage {% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+    <!-- <img src="static/img/bgvid.gif" alt="" class="video"> -->
+    <a href='#activities-section'> 
+        <button id="cta">Our Activities</button> 
+    </a>
+    <div class="about-section" id='about-anchor'>
+        <div class="contrast-box">
+            <h1 class="title">About Us</h1>
+            <p class="description">In Condition Studio we help our members to develop 
+                a fit and healthy lifestyle! Through a variety of 
+                activities, individually tailored training programs 
+                and our nutritional coaches we strive to help you 
+                achive all your goals.</p>
+                    
+        </div>
+        <h1 class="sub-title">Our Staff</h1>
+        <p class="staff-intro">We are proud to have an excellent team of professionals available to guide you
+            throughout  <br>your journey. Here is our team:</p>
+        <div class="staff-grid">
+            <div class="staff-container">
+                <h3 class="name">Sebastian <br> <h4 class="last">Stamford</h4></h3>
+                <img class="staff-img" src="static/img/sebastianstamford.svg">
+                <div class="title1">Trainer</div>
+            </div>
+            <div class="staff-container">
+                <h3 class="name">Hannah <br> <h4 class="last">Vickers</h4></h3>
+                <img class="staff-img" src="static/img/hannahvickers.svg">
+                <div class="title2">Trainer</div>
+            </div>
+            <div class="staff-container">
+                <h3 class="name">Isabel <br> <h4 class="last">Hudson</h4></h3>
+                <img class="staff-img" src="static/img/isabelhudson.svg">
+                <div class="title3">Trainer</div>
+            </div>
+            <div class="staff-container">
+                <h3 class="name">Nicholas <br> <h4 class="last">Cameron</h4></h3>
+                <img class="staff-img" src="static/img/nicholascameron.svg">
+                <div class="title4">Trainer</div>
+            </div>
+            <div class="staff-container">
+                <h3 class="name">Levi <br> <h4 class="last">Williams</h4></h3>
+                <img class="staff-img" src="static/img/leviwilliams.svg">
+                <div class="title5">Nutritionist</div>
+            </div>
+            <div class="staff-container">
+                <h3 class="name">Anne <br> <h4 class="last">Smith</h4></h3>
+                <img class="staff-img" src="static/img/annesmith.svg">
+                <div class="title6">
+                    Nutritionist
+                </div>
+            </div>
+            <p class="search-intro">You can search for any of our trainer's contact information to <br>
+            ask them questions about our activities or your particular goals:</p>
+            <form action="/search/" method="get" id="search">
+                <input type="text" name='input'></input>
+                <input type="submit" value="search" class="search-button">
+            </form>
+        
+        </div>
+        <div class="contrast-box">
+            <div class="facilities">
+                <h1 class="subtitle-facilities">Our Facilities</h1>
+                <p class="description-facilities">With our state-of-the-art facilities and professional staff we strive to help you develop your physique and contribute to a healthy lifestyle. Here are some of our member's perks:</p>
+                <div class="icon-container">
+                    <p class="icon-label">Nutritional <br> services </p>
+                    <input name='icon' type="image" class='icon' src="static/img/nutrition.svg">
+                </div>
+
+                <div class="icon-container">
+                    <p class="icon-label">Personalized <br> routines</p>
+                    <input name='icon' type="image" class='icon' src="static/img/personalized.svg">
+                </div>
+
+                <div class="icon-container">
+                    <p class="icon-label">Fast <br> Wi-Fi</p>
+                    <input name='icon' type="image" class='icon' src="static/img/wifi.svg">
+                </div>
+
+                <div class="icon-container">
+                    <p class="icon-label">Fingerprint <br> entry system</p>
+                    <input name='icon' type="image" class='icon' src="static/img/fingerprint.svg">
+                </div>
+
+                <div class="icon-container">
+                    <p class="icon-label">Top-notch <br> locker rooms</p>
+                    <input name='icon' type="image" class='icon' src="static/img/lockers.svg">
+                </div>
+
+                <div class="icon-container">
+                    <p class="icon-label">Dedicated <br> mobile app</p>
+                    <input name='icon' type="image" class='icon' src="static/img/app.svg">
+                </div>
+
+                <div class="icon-container">
+                    <p class="icon-label">Heating / cooling<br> systems</p>
+                    <input name='icon' type="image" class='icon' src="static/img/ac.svg">
+                </div>
+
+                <div class="icon-container">
+                    <p class="icon-label">Complimentary <br> beverages</p>
+                    <input name='icon' type="image" class='icon' src="static/img/beverages.svg">
+                </div>
+            </div>
+        </div>
+        </div>
+        <h1 class="sub-title">Our Activities</h1>
+        <div class="activities" id="activities-section">
+            <div class="activity">
+                <img src="static/img/pilates-title.svg" alt="" class="activity-title-pilates">
+                <img class='activity-img' src="static/img/pilates1.svg" alt="">
+                <p class="activity-description">
+                    Consists of low-impact flexibility and muscular strength and 
+                    endurance movements.
+                </p>
+            </div>
+            <div class="activity">
+                <img src="static/img/zumba-title.svg" alt="" class="activity-title-zumba">
+                <img class='activity-img' src="static/img/zumba1.svg" alt="">
+                <p class="activity-description">
+                    Combining music, dance moves and interval training, Zumba helps 
+                    improve cardiovascular fitness.
+                </p>
+            </div>
+            <div class="activity">
+                <img src="static/img/weightlifting-title.svg" alt="" class="activity-title-wl">
+                <img class='activity-img' src="static/img/weightlifting1.svg" alt="">
+                <p class="activity-description">
+                    Weightlifting is a type of strength training 
+                    for developing strength and muscle size.
+                </p>
+            </div>   
+        </div>  
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,896 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap');
+
+/*Color Palette*/
+:root {
+    --primary: #C73939;
+    --secondary: #FFFCEB; 
+    font-family: 'Syne', 'Helvetica', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-weight: bold;
+    list-style-type: none;
+    background: var(--primary);
+}
+
+.burger {
+    top: 1rem;
+    right: 1rem;
+    position: fixed;
+    float: right;
+    /* display: flex; */
+    z-index: 1000;
+    display: none;
+
+}
+
+.logo {
+    position: absolute;
+    width: 99%;
+    top: 1rem;
+    z-index: 999;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    z-index: 1000;
+}
+
+.menu {
+    background-color: black;
+    position: absolute;
+    /* margin-top: 6rem; */
+    right: 2rem;
+    width: 41rem;
+    /*height: 4rem;*/
+    top: 9rem; 
+    /* padding: 1.2rem 0 0 0; */
+    z-index: 999;
+    text-align: justify;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    border-radius: 6px;
+    width: 41rem;
+  }
+
+.navigation {
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 1rem 2.3rem 1rem 2.3rem;
+    display: inline-block;
+    transition: 1s;
+    height: 4rem;
+    background-color: black;
+}
+
+#sticky.menu {
+    z-index: 999;
+}
+
+/* #home, #about, #contact, #login, #register {
+    border-right: 2px solid var(--secondary);
+} */
+
+#home:hover, #about:hover, #contact:hover, #login:hover, #register:hover  {
+    font-size: 1.1em;
+    background-color: white;
+    color:black;
+    
+}
+
+.video {
+    width: 100vw;
+    height: auto;
+    position: absolute; 
+    top: 9rem;
+    z-index: 1;
+}
+
+
+#cta {
+    width: 8rem;
+    background-color: var(--secondary);
+    color: black;
+    width: 17rem;
+    padding: 1rem;
+    font-size: 1.2em;
+    border: none;
+    text-decoration: none;
+    font-weight: 800;
+    text-align: center;
+    margin: 13rem auto 0 auto;
+    display: block;
+    border-radius: 6px;
+    position: absolute;
+    top:32rem;
+    left: 0;
+    right: 0;
+    font-family: inherit;
+    z-index: 998;
+    cursor: pointer;
+}
+
+.about-section {
+    position: relative;
+    margin-top: 70rem;
+}
+.contrast-box {
+    background-color: black;
+    width: 100%;
+    height: 25rem;
+}
+
+
+.title {
+    color: var(--secondary);
+    font-weight: 800;
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 4em;
+}
+
+.icon-container {
+    display: inline-block;
+    margin: 2rem;
+}
+
+.icon-label {
+    color: var(--secondary);
+    text-align: center;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-top: 1.2rem;
+    margin-left: 1.7rem;
+}
+
+
+.description {
+    font-size: 1.2em;
+    color: var(--secondary);
+    letter-spacing: .2em;
+    line-height: 3em;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.description-facilities {
+    font-size: 1.2em;
+    color: var(--secondary);
+    letter-spacing: .2em;
+    line-height: 3em;
+    margin: 2rem 2rem 1rem 2rem ;
+}
+.sub-title {
+    color: var(--secondary);
+    font-weight: 800;
+    margin-left:2rem;
+    margin-top: 10rem;
+}
+
+/* .facilities {
+    padding-top: 12rem;
+} */
+
+.subtitle-facilities {
+    color: var(--secondary);
+    font-weight: 800;
+    margin-left:2rem;
+    margin-top: 10rem;
+
+}
+
+.staff-grid {
+    text-align: center;
+}
+
+.staff-intro {
+    font-size: 1.2em;
+    color: var(--secondary);
+    letter-spacing: .2em;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.staff-container {
+    /* ESTE POSICIONA IMG */
+    height: auto;
+    display: inline-block;
+    position: relative;
+    margin: 2rem 5rem 0 2rem;
+    /* text-align: center; */
+    
+}
+
+.name {
+    color: var(--secondary);
+    text-align: left;
+    font-size: 1.7em;
+    letter-spacing: 0.5em;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+.last {
+    font-size: 1.1em;
+    color: var(--secondary);
+    text-align: left;
+}
+
+
+.staff-img {
+    width: 250px;
+    height: 280px;
+    border-radius: 8px;
+    /* width: 150%;
+    height: 170%; */
+    
+}
+
+.title1, .title2,
+.title3,.title4, 
+.title5, .title6 {
+    color: var(--secondary);
+    position: absolute;
+    border: black;
+    font-weight: 800;
+    bottom: 8px;
+    right: 3em;
+    line-height: 1em;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+
+
+.activities {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.activity-title-pilates {
+    position: absolute;
+    z-index: 995;
+    margin-top: 5rem;
+    margin-left: 1.3rem;
+}
+
+.activity-title-zumba {
+    position: absolute;
+    z-index: 995;
+    margin-top: 5rem;
+}
+
+.activity-title-wl {
+    position: absolute;
+    z-index: 995;
+    margin-top: 5rem;
+    margin-left: 1.3rem;
+}
+
+.activity-img {
+    position: relative;
+    width: 400px;
+    height: 666px;
+    z-index: 990;
+    margin: 5rem 2rem 0.5rem 2rem;
+}
+
+.activity-description {
+    text-align: left;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    color: var(--secondary);
+    font-weight: normal;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+    margin-bottom: 6rem;
+}
+
+/* .contact-form {
+    text-align: center;   
+} */
+
+.label {
+    margin-left: 0;
+    font-size: 1.2em;
+    color: var(--secondary);
+    font-weight: 600;
+    margin: 0 2rem 0 2rem;
+}
+
+.input {
+    width: 85vw;
+    font-size: 1.2em;
+    background-color: var(--secondary);
+    height: 2.5rem;
+    font-weight: 500;
+    font-family: inherit;
+    margin: 0 2rem 0 2rem;
+    padding: 1rem;
+}
+
+.input-text {
+    width: 85vw;
+    font-size: 1.2em;
+    font-family: inherit;
+    font-weight: 600;
+    background-color: var(--secondary);
+    margin: 0 2rem 0 2rem;
+    padding: 1rem;
+}
+
+.submit-form {
+    background-color: black;
+    color: var(--secondary);
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5em;
+    border: none;
+    font-family: inherit;
+    font-weight: 800;
+    text-align: center;
+    margin: 4rem auto 5rem auto;
+    display: block;
+    left: 0;
+    right: 0;
+    font-family: inherit;
+    font-weight: 800;
+}
+.contact-number {
+    text-align: left;
+    margin: 2rem 2rem 0 2rem;
+    color: var(--secondary);
+    font-weight: normal;
+    line-height: 2em;
+
+}
+.contact-address {
+    text-align: left;
+    margin: 0.5rem 2rem 2rem 2rem;
+    color: var(--secondary);
+    font-weight: normal;
+    line-height: 2em;
+}
+
+#map {
+    height: 15rem;
+    width: 100%;
+    /* margin-bottom: 1rem; */
+    display: block;
+
+    width: 70%;
+    height: 240px;
+    position: absolute;
+    bottom: -40rem;
+    right: 0;
+}
+
+.social-media {
+    background-color: black;
+    width: 100%;
+    height: 3.5rem;
+    position: relative;
+    margin: 0;
+    bottom: 0;
+    color: var(--secondary);
+    font-weight: normal;
+    line-height: 2em;
+    text-align: left;
+}
+
+.rights {
+    background-color: var(--secondary);
+    color: black;
+    font-size: 0.9em;
+}
+
+/* NOT FOR MOBILE, BUT DESKTOP */
+footer {
+    display: absolute;
+}
+
+/* LOGIN.HTML */
+
+.login-title {
+    text-align: center;
+    font-weight: 800;   
+    color: var(--secondary);
+    margin-top: 36rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    font-size: 4em;
+}
+
+.fail-title {
+    margin-top: 36rem;
+    text-align: center;
+    font-weight: 800;   
+    color: var(--secondary);
+    margin-bottom: 5rem;
+    font-size: 4em;
+}
+
+.fail {
+    margin: auto 2rem 2rem 6rem;
+}
+
+
+.login-label {
+    margin-left: 0;
+    font-size: 1.2em;
+    color: var(--secondary);
+    font-weight: 600;
+    margin: 0 3.5rem 0 3.5rem;
+}
+
+.login-input {
+    width: 75vw;
+    font-size: 1.2em;
+    background-color: var(--secondary);
+    height: 2.5rem;
+    font-weight: 500;
+    font-family: inherit;
+    margin: 0 3.5rem 0 3.5rem;
+    padding: 1rem;
+}
+
+.login-button {
+    border-radius: 5px;
+    background-color: black;
+    color: var(--secondary);
+    font-size: 1.2em;
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    border: none;
+    margin: 3rem auto 5rem 2rem;
+    cursor: pointer;
+}
+
+.newlogin-button{
+    border-radius: 5px;
+    background-color: black;
+    color: var(--secondary);
+    font-size: 1.2em;
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    border: none;
+    margin: 1rem auto 5rem 6rem;
+    cursor: pointer;
+}
+
+.separator {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.login-success {
+    margin: 2rem 3rem 6rem 3rem;
+    line-height: 2rem;
+    font-size: 1.2em;
+}
+
+hr {
+    width: 85%;
+    color: var(--secondary);
+    margin-top: 6rem;
+    display: block;
+    margin: auto;
+}
+
+.forgot-password {
+    margin-left: 3.5rem;
+    margin-top: 2.5rem;
+}
+
+.create-account {
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.non-login {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: normal;
+    margin-bottom: 6rem;
+    text-align: center;
+    /* margin: 34rem; */
+}
+
+/* PROFILE.HTML */
+
+.member {
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 2100px;
+    width: 15rem;
+    height: auto;
+    margin-top: 4rem;
+}
+
+/* CAMBIAR EL NOMBRE DE ESTA CLASE XQ GENERA CONFLICTO ON OUR TRAINERS SECTION */
+/* .name {
+    color: var (--secondary);
+    font-size: 1.7em;
+    letter-spacing: 0.5em;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-weight: 500;
+} */
+
+/* RESULTS.HTML. */
+
+.result-container {
+
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.result-title {
+    text-align: center;
+    font-weight: 800;   
+    color: var(--secondary);
+    margin-top: 36rem;
+    padding: 2rem;
+    font-size: 4em;
+}
+
+.result-img {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    width: 250px;
+    height: 280px;
+    border-radius: 10px;
+}
+.search-intro {
+    margin-top: 2rem;
+    font-size: 1.4em;
+    letter-spacing: 0.2em;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+.search-button {
+    border-radius: 5px;
+    background-color: black;
+    color: var(--secondary);
+    font-size: 1.2em;
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    border: none;
+    margin: 3rem auto 5rem 2rem;
+    cursor: pointer;
+}
+
+.no-results {
+    margin: 4rem auto 6rem 6rem;
+}
+
+
+.result-trainer {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.result-email {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.results-separator {
+    width: 80rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+/*---------------*/
+
+.last-workout {
+    width: 100%;
+    background-color:black;
+    color: var(--secondary);
+    text-align: center;
+    display: block;
+    height: 3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.activity-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.new-activity-btn {
+    display: block;
+    background-color: black;
+    color: var(--secondary);
+    width: 14rem;
+    height: 4rem;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 1rem;
+    border: none;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.my-activities-btn {
+    display: block;
+    background-color: var(--secondary);
+    color: black;
+    border: none;
+    margin-top: 2rem;
+    text-align: center;
+    width: 12rem;
+    height: 4rem;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.trainer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer-img {
+    width: 8rem;
+    height: auto;
+    margin-top: 2.5rem;
+    /* margin-left: 15%; */
+}
+
+.trainer-title-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-left: 1.25rem;
+}
+
+.trainer-title {
+    text-decoration: underline;
+    font-size: 1em;
+    color: var(--secondary);
+    letter-spacing: 0.1em;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.trainer-first {
+    font-size: 0.9em;
+    color: var(--secondary);
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-top: 0.8rem;
+}
+
+.trainer-last {
+    font-size: 0.8em;
+    color: var(--secondary);
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-top: 0.3rem;
+}
+/* REGISTER (NEW_USER.HTML) */
+.register-title {
+    color: var(--secondary);
+    font-weight: 800;
+    margin-top: 36rem;
+    padding: 2rem;
+    font-size: 4em;
+    text-align: center;
+}
+
+.user-created {
+    margin-top: 36rem;
+    text-align: center;
+    font-weight: 800;   
+    color: var(--secondary);
+    margin-bottom: 5rem;
+    font-size: 4em;
+}
+
+.new-description{
+    margin: auto 2rem 2rem 6rem;
+}
+
+.registration-fail {
+    margin-top: 36rem;
+    text-align: center;
+    font-weight: 800;   
+    color: var(--secondary);
+    margin-bottom: 5rem;
+    font-size: 4em;}
+
+.registrationfail-description {margin: auto 6rem 4rem 6rem;}
+
+
+/* --------------------------*/
+
+/* LOGIN (PRIVATE.HTML) */
+.welcome {
+    margin-top: 36rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+
+/* .gmap_canvas {
+    width: 70%;
+    height: 240px;
+    position: absolute;
+    bottom: -40rem;
+    right: 0;
+    } */
+/* --------------------------*/
+
+
+/* email (contact.HTML) */
+
+.contact-title {
+    color: var(--secondary);
+    font-weight: 800;
+    margin-top: 36rem;
+    padding: 2rem;
+    font-size: 4em;
+    text-align: center;
+}
+
+
+#email {
+    margin-top: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.register-button {
+    border-radius: 5px;
+    background-color: black;
+    color: var(--secondary);
+    font-size: 1.2em;
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    border: none;
+    margin: 3rem auto 5rem 2rem;
+    cursor: pointer;
+
+}
+
+.helptext {
+    list-style: square;
+    display: block;
+}
+#id_message {
+    margin-bottom: -9rem;
+}
+
+#id_username {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+#id_password {
+    margin: 1rem auto 1rem 1rem;
+}
+
+
+#id_password1 {
+    margin: 1rem auto 1rem 1rem;
+}
+
+#id_password2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form {
+    justify-content: center;
+}
+
+.form-email {
+    margin: 0 1rem 2rem 1rem;
+}
+
+.form-message {
+    margin: 0 1rem 2rem 1rem;
+}
+
+.form-login {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  width: 20%;
+
+  padding: 10px;
+}
+
+.email-sent {
+    margin-top: 36rem;
+    text-align: center;
+    font-weight: 800;   
+    color: var(--secondary);
+    margin-bottom: 5rem;
+    font-size: 4em;
+}
+
+.sent-description {
+    margin: auto 2rem 2rem 6rem;
+}
+
+.message-button {
+    border-radius: 5px;
+    background-color: black;
+    color: var(--secondary);
+    font-size: 1.2em;
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    border: none;
+    margin: 12rem auto 5rem 2rem;
+    cursor: pointer;
+}
+
+.sub-title-contact {
+    color: var(--secondary);
+    font-weight: 800;
+    margin-left:2rem;
+    margin-top: 5rem;
+
+}
+
+
+/* --------------------------*/
